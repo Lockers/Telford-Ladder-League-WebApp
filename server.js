@@ -463,8 +463,8 @@ port = process.env.PORT;
 if (port == null || port == "") {
   port = 8000;
 }
-if (err) console.log(err);
-console.log(`server is listeing on port ${port}`);
+// if (err) console.log(err);
+// console.log(`server is listeing on port ${port}`);
 server.listen(port);
 
 // server.listen(process.env.PORT, err => {
