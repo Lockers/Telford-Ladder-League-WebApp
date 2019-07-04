@@ -461,5 +461,5 @@ server.delete('/players/:id', (req, res) => {
 
 server.listen(process.env.PORT, err => {
   if (err) console.log(err);
-  console.log(`server is listening on port ${port}`);
+  console.log(`server is listeing on port ${port}`);
 });
