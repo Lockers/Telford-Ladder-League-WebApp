@@ -459,7 +459,7 @@ server.delete('/players/:id', (req, res) => {
   }
 });
 
-server.listen(port, err => {
+server.listen(process.env.PORT, err => {
   if (err) console.log(err);
   console.log(`server is listening on port ${port}`);
 });
