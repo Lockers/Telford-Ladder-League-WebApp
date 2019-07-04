@@ -459,7 +459,15 @@ server.delete('/players/:id', (req, res) => {
   }
 });
 
-server.listen(process.env.PORT, err => {
-  if (err) console.log(err);
-  console.log(`server is listeing on port ${port}`);
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+if (err) console.log(err);
+console.log(`server is listeing on port ${port}`);
+server.listen(port);
+
+// server.listen(process.env.PORT, err => {
+//   if (err) console.log(err);
+//   console.log(`server is listeing on port ${port}`);
+// });
