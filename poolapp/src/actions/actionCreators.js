@@ -8,7 +8,7 @@ import {
     ADDING_PLAYER_FAILURE,
 } from './actionTypes'
 
-const baseUrl = 'http://localhost:3333/players';
+const baseUrl = 'https://telfordpoolapi.herokuapp.com/players';
 
 export const getPlayers = () => dispatch => {
     dispatch({ type: GETTING_PLAYERS });
