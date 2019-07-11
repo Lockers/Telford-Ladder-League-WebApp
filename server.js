@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-let port = 3333;
 
 const server = express();
 server.use(express.json());
@@ -459,15 +458,8 @@ server.delete('/players/:id', (req, res) => {
   }
 });
 
-port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-// if (err) console.log(err);
-// console.log(`server is listeing on port ${port}`);
-server.listen(port);
+port = process.env.PORT || 8000;
 
-// server.listen(process.env.PORT, err => {
-//   if (err) console.log(err);
-//   console.log(`server is listeing on port ${port}`);
-// });
+server.listen(port, () => {
+  console.log(`\n* Server Running on http://localhost:${port} *\n`);
+});
