@@ -1,7 +1,7 @@
 import React from 'react';
 import { getPlayers, addPlayer } from './actions/actionCreators';
 import { connect } from 'react-redux';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Players } from './components/Players';
 import { SinglePlayer } from './components/SinglePlayer'
 import { Home } from './components/Home'

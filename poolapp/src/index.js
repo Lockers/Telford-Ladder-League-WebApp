@@ -12,8 +12,8 @@ import { playerReducer } from './reducers/reducers'
 const store = createStore(
     playerReducer,
     /* applyMiddleware goes here */
-    compose(applyMiddleware(thunk),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+    compose(applyMiddleware(thunk))
+        // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 );
 
 ReactDOM.render(
